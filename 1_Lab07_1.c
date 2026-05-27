@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
@@ -10,7 +11,6 @@ typedef struct
 int rank(int score, int arr[], int n)
 {
     int r = 1;
-
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > score)
@@ -28,14 +28,15 @@ int main()
 
     int b[101], c[101];
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         scanf("%s %d %d %d", s[i].name, &s[i].a, &s[i].b, &s[i].c);
-
         b[i] = s[i].b;
         c[i] = s[i].c;
     }
 
     int idx = 0;
+
     for (int i = 1; i < n; i++)
     {
         if (s[i].a > s[idx].a)
